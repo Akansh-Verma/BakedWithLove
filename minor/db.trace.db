@@ -1,3 +1,0 @@
-2022-02-11 20:09:05 jdbc[23]: exception
-org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO USERS(ID, EMAIL, PASSWORD, FIRST_NAME, LAST_NAME) VALUES[*]"; expected "ROW, (, DEFAULT, NOT, EXISTS, INTERSECTS, UNIQUE"; SQL statement:
-INSERT INTO users(id, email, password, first_Name, last_Name) VALUES [42001-200]
