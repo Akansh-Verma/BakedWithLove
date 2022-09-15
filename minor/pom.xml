@@ -2,6 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<packaging>war</packaging>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -86,11 +87,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.paytm</groupId>
-			<artifactId>miniapp-sdk-client</artifactId>
-			<version>1.0.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
-			<groupId>com.paytm</groupId>
 			<artifactId>paytm-checksum</artifactId>
 			<version>1.2.0</version>
 		</dependency>
@@ -109,13 +105,42 @@
 			<id>my-repo1</id>
 			<url> http://artifactorypg.paytm.in/artifactory/libs-release </url>
 		</repository>
+		<repository>
+			<id>my-repo1</id>
+			<url> http://artifactorypg.paytm.in/artifactory/libs-release </url>
+		</repository>
 	</repositories>
 	<build>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<executable>true</executable>
+				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+				  <execution>
+					<phase>package</phase>
+					<goals>
+					  <goal>single</goal>
+					</goals>
+				  </execution>
+				</executions>
+				<configuration>
+				  <archive>
+					<manifest>
+					  <addClasspath>true</addClasspath>
+					  <mainClass>bakewithlove.minor.MinorApplication</mainClass>
+					</manifest>
+				  </archive>
+				  <descriptorRefs>
+					<descriptorRef>jar-with-dependencies</descriptorRef>
+				  </descriptorRefs>
+				</configuration>
+			  </plugin> 
 		</plugins>
 	</build>
 

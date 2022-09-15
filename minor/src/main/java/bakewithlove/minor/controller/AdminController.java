@@ -83,7 +83,8 @@ public class AdminController {
     @Autowired
     ProductService productService;
 
-    public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";
+     //public static String uploadDir = System.getProperty("user.dir") + "/src/main/resources/static/productImages";
+     public static String uploadDir = "D:/Files/GithubDesktop/BakedWithLove/minor/src/main/resources/static/productImages";
 
     @GetMapping("/admin/products")
     public String products(Model model)
@@ -153,6 +154,7 @@ public class AdminController {
         model.addAttribute("productDTO", productDTO);
         return "productsAdd";
     }
+
     
 }
 

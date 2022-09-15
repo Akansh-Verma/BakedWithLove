@@ -6,10 +6,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import lombok.Data;
+
 
 
 @Entity
-
+@Data
 public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -17,22 +19,6 @@ public class Category {
     private int id;
 
     private String name;
-
-    public int getId() {
-        return this.id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return this.name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     
 }
