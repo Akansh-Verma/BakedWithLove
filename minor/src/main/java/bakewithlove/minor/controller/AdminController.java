@@ -154,7 +154,13 @@ public class AdminController {
         model.addAttribute("productDTO", productDTO);
         return "productsAdd";
     }
+    @Autowired
+    PaymentController paymentController;
 
+    @GetMapping("/payment")
+    public String getPayment() {
+        return "payment";
+    }
     
 }
 
