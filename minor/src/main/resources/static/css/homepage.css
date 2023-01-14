@@ -95,7 +95,7 @@ body{
     left: 0;
     top:0;
     background-image: url('https://snapshotsforsoreeyes.files.wordpress.com/2012/10/img_2824_hdr.jpg');
-    background-size: cover;
+    background-size: 100% 100%;
   }
   #topside .bg-cover:hover{
     opacity:1;
