@@ -739,7 +739,7 @@ header .arrow-down {
 /*Start Recipes*/
 .recipes .image {
   height: 350px;
-  background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988529/three-col-1.jpg") fixed center;
+  background: url("/images/rec.png") fixed center;
   background-size: cover;
 }
 /*End Recipes*/
@@ -990,9 +990,17 @@ footer .newsletter i {
   header nav .logo a:hover {
     color: #d5cbba;
   }
-  haeder nav .navigation-bar {
-   padding-left: 5rem;
+  header nav .navigation-bar {
+   padding-left: 10rem;
    padding-right: 0;
+  }
+  .about-us .image-container .image1{
+    width: 352px;
+    height: 100%;
+  }
+  .about-us .image-container .image2 {
+    width: 297px;
+    height: 100%;
   }
 }
 

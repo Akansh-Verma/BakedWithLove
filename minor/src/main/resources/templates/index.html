@@ -81,30 +81,33 @@
               <i class="fas fa-asterisk"></i>
               <span class="right"></span>
           </div>
-          <span>Ready To Be Opened</span>
-          <div class="button"><button>Explore</button></div>
+          
+          <div class="button"><a th:href=@{/shop}><button>Explore</button></a></div>
       </div>
       <svg class="svg-down" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="currentColor" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
-      <div class="arrow-down">
-      </div>
+      <a href="#about"><div class="arrow-down"></div></a>
   </header>
   <!--End Header-->
 
   <!--start About Us-->
-  <div class="about-us">
+  <div class="about-us" id="about">
       <div class="text">
           <h2>Discover</h2>
           <h3>Our Story</h3>
           <div><i class="fas fa-asterisk"></i></div>
-          <p>Rosa is a restaurant, bar and coffee roastery located on a busy corner site in Farringdon’s Exmouth Market. With glazed frontage on two sides of the building, overlooking the market and a bustling London intersection.</p>
+          <p>Baked With Love is an online bakery web application that allows customer to check
+            for different bakery items available at the online shop and then purchase online.
+            Making sure all the features of an e-commerce web application, this online bakery 
+            web application (Baked with Love) acts as a central database containing various bakery products. 
+        </p>
           <div><a class="a-CTA" href="#">About Us</a></div>
       </div>
       <div class="image-container">
           <div class="image image1">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988527/vertical-photo-1.jpg" alt="Food Photo">
+              <img src="/images/food1.jpg" alt="Food Photo">
           </div>
           <div class="image image2">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988532/vertical-photo-2.jpg" alt="Food Photo">
+              <img src="/images/food2.jpg" alt="Food Photo">
           </div>
       </div>
   </div>

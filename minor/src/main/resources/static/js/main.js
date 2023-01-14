@@ -233,3 +233,4 @@ if (pageTitle.text === "ROSA- Restaurant") {
     window.addEventListener("click", boxModelFun);
     boxModelArrow.addEventListener("click", boxModelFun);
 }
+
