@@ -814,9 +814,9 @@ header .arrow-down {
 
 /*Start fixed-image*/
 .fixed-image {
-  background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988533/frontpage-menu.jpg") fixed center;
+  background: url("/images/fi.png") fixed center;
   background-size: cover;
-  height: 400px;
+  height: 450px;
 }
 /*End fixed-image*/
 

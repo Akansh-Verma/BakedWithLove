@@ -100,7 +100,7 @@
             Making sure all the features of an e-commerce web application, this online bakery 
             web application (Baked with Love) acts as a central database containing various bakery products. 
         </p>
-          <div><a class="a-CTA" href="#">About Us</a></div>
+          <div><a class="a-CTA" th:href=@{/shop}>About Us</a></div>
       </div>
       <div class="image-container">
           <div class="image image1">
@@ -139,24 +139,34 @@
       </div>
       <div class="menu-image-container">
           <div class="image active">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988517/big-menu-thumb-1.jpg" alt="Food Photo">
+              <img src="/images/menu1.png" alt="Food Photo">
           </div>
           <div class="image">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988526/big-menu-thumb-2.jpg" alt="Food Photo">
+              <img src="/images/menu2.png" alt="Food Photo">
           </div>
           <div class="image">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988525/big-menu-thumb-4.jpg" alt="Food Photo">
+              <img src="/images/menu3.png" alt="Food Photo">
           </div>
           <div class="image">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988524/big-menu-thumb-6.jpg" alt="Food Photo">
+              <img src="/images/menu4.png" alt="Food Photo">
           </div>
       </div>
       <div class="text">
           <h2>Discover</h2>
           <h3>Menu</h3>
           <div><i class="fas fa-asterisk"></i></div>
-          <p>For those with pure food indulgence in mind, come next door and sate your desires with our ever changing internationally and seasonally inspired small plates.  We love food, lots of different food, just like you.</p>
-          <div><a class="a-CTA" href="#">View The Full Menu</a></div>
+          <p>
+            Baked With Love offers a wide variety of freshly baked goods, 
+            including artisan breads, delicious pastries, and homemade cakes. 
+            Our bread selection includes sourdough, whole wheat, and rye, all made 
+            from high-quality, locally sourced ingredients. Our pastries range from 
+            classic croissants to more unique creations like matcha green tea danishes. 
+            We also have a wide selection of cakes for any occasion, including our signature 
+            chocolate cake, lemon lavender cake and gluten-free options. All our products are 
+            made from scratch daily, using only the freshest ingredients. Stop by today and treat 
+            yourself to something delicious!
+          </p>
+          <div><a class="a-CTA" th:href=@{/shop}>View The Full Menu</a></div>
       </div>
   </div>
   <!--End Menu-->
@@ -176,8 +186,15 @@
           <h2>Culinary</h2>
           <h3>Delight</h3>
           <div><i class="fas fa-asterisk"></i></div>
-          <p>We promise an intimate and relaxed dining experience that offers something different to local and foreign patrons and ensures you enjoy a memorable food experience every time.</p>
-          <div><a class="a-CTA" href="#">Make a Reservation</a></div>
+          <p>
+            Whether you're in the mood for a warm croissant 
+            with a cup of coffee or a slice of our signature 
+            chocolate cake, our menu has something for everyone. 
+            We also offer a selection of savory items, such as 
+            sandwiches and quiches, for those looking for a more 
+            substantial meal.
+          </p>
+          <div><a class="a-CTA" th:href=@{/shop}>Make a Reservation</a></div>
       </div>
       <div class="image-container">
           <div class="image image1">
