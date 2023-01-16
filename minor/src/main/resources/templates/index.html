@@ -82,7 +82,7 @@
               <span class="right"></span>
           </div>
           
-          <div class="button"><a th:href=@{/shop}><button>Explore</button></a></div>
+          <div class="button"><a th:href="@{/shop}"><button>Explore</button></a></div>
       </div>
       <svg class="svg-down" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="currentColor" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
       <a href="#about"><div class="arrow-down"></div></a>
@@ -100,7 +100,7 @@
             Making sure all the features of an e-commerce web application, this online bakery 
             web application (Baked with Love) acts as a central database containing various bakery products. 
         </p>
-          <div><a class="a-CTA" th:href=@{/shop}>About Us</a></div>
+          <div><a class="a-CTA" th:href="@{/shop}">About Us</a></div>
       </div>
       <div class="image-container">
           <div class="image image1">
@@ -132,9 +132,9 @@
               <div class="arrow arrow-left"></div>
           </div>
           <div class="box-image-container">
-              <div class="box-image">
-                  <img src=""  alt="Food Photo">
-              </div>
+              <!-- <div class="box-image">
+                  <img src="/images/cul2.png"  alt="Food Photo">
+              </div> -->
           </div>
       </div>
       <div class="menu-image-container">
@@ -166,7 +166,7 @@
             made from scratch daily, using only the freshest ingredients. Stop by today and treat 
             yourself to something delicious!
           </p>
-          <div><a class="a-CTA" th:href=@{/shop}>View The Full Menu</a></div>
+          <div><a class="a-CTA" th:href="@{/shop}">View The Full Menu</a></div>
       </div>
   </div>
   <!--End Menu-->
@@ -180,7 +180,7 @@
   </div>
   <!--End fixed-image-->
 
-  <!--start About Us-->
+  <!--start Culinary -->
   <div class="reservation">
       <div class="text">
           <h2>Culinary</h2>
@@ -194,25 +194,31 @@
             sandwiches and quiches, for those looking for a more 
             substantial meal.
           </p>
-          <div><a class="a-CTA" th:href=@{/shop}>Make a Reservation</a></div>
+          <div><a class="a-CTA" th:href="@{/shop}">Make a Reservation</a></div>
       </div>
       <div class="image-container">
           <div class="image image1">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988518/bacon-1.jpg" alt="Food Photo">
+              <img src="/images/cul1.png" alt="Food Photo">
           </div>
           <div class="image image2">
-              <img src="https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988518/bacon-2.jpg" alt="Food Photo">
+              <img src="/images/cul2.png" alt="Food Photo">
           </div>
       </div>
   </div>
-  <!--End About Us-->
+  <!--End Culinary -->
 
   <!--Start Footer-->
   <footer>
       <div class="text">
-          <h2>ABOUT ROSA</h2>
+          <h2>ABOUT BAKED WITH LOVE</h2>
           <div><i class="fas fa-asterisk"></i></div>
-          <p>ROSA is an enchanting and easy-to-use parallax Restaurant WordPress theme that allows you to tell your story in a dynamic, narrative and enjoyable way, making it perfect for restaurants, bakeries, bars or coffee shops.</p>
+          <p>
+            Baked With Love is a SpringBoot powered website
+            which provides you with multiple functionalities.
+            Making sure all the features of an e-commerce web application, 
+            this online bakery web application (Baked with Love) acts as a 
+            central database containing various bakery products. 
+          </p>
       </div>
       <div class="contact-container">
         <div class="social-media">
@@ -224,14 +230,14 @@
                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
-          <div class="newsletter">
+           <!-- <div class="newsletter">
             <h3>NewsLetter</h3>
               <form method="post">
                   <input type="email" name="email" placeholder="Type Your Email">
                   <i class="fas fa-envelope"></i>
               </form>
-          </div>
-      </div>
+          </div> -->
+      </div> 
   </footer>
 <!--End Footer-->
 
@@ -240,15 +246,15 @@
       <svg class="svg-up" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="#262526" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
       <i class="fas fa-angle-double-up arrow-up"></i>
       <ul class="info">
-          <li>&copy; ROSA 2017</li>
-          <li>13 Hanway Square, London</li>
-          <li>Tel: 71494563</li>
-          <li>Handcrafted with love by <a href="#">Pixelgrade</a> Team</li>
+          <li>&copy; Baked With Love 2022</li>
+          <li>UPES</li>
+          <li>Tel: 123</li>
+          <li>Handcrafted with love by <a href="https://github.com/Akansh-Verma/BakedWithLove">BakedWithLove</a> Team</li>
       </ul>
-      <ul class="CTA">
+      <!-- <ul class="CTA">
           <li><a href="#">PERMISSIONS AND COPYRIGHT</a></li>
           <li><a href="#">CONTACT THE TEAM</a></li>
-      </ul>
+      </ul> -->
   </div>
   <!--End Copy-Right-->
 
