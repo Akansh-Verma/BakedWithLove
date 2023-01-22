@@ -734,6 +734,7 @@ header .arrow-down {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
+  top: 50px;
 }
 .btn:hover, .btn:focus {
   color: #fff;
