@@ -718,7 +718,7 @@ header .arrow-down {
 /* Start items */
 .items {
   box-sizing: border-box;
-  margin-left: 80px;
+  margin-left: 90px;
   margin-top: 70px;
   margin-bottom: 90px;
 }
@@ -989,6 +989,9 @@ footer .newsletter i {
   .about-us .image-container .image2 {
     width: 297px;
     height: 100%;
+  }
+  .items {
+    grid-gap: 47px;
   }
 }
 
