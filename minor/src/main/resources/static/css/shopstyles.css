@@ -808,6 +808,38 @@ header .arrow-down {
  
 /* End items */
 
+/* Start menu */
+.menu {
+  position: relative;
+  padding: 60px;
+}
+
+.menu .text {
+  color: #9a9998;
+  overflow-wrap: break-word;
+  padding: 15px 15px 15px 15px;
+  width: 796px;
+  height: 500px;
+}
+.menu .text h3 {
+  color: #000;;
+}
+
+.menu .text p {
+  text-align: center;
+}
+
+.menu .menu-image img {
+  position: relative;
+  padding: 5px 2px 5px 2px;
+  background:no-repeat;
+  height: 590px;
+  width: 400px;
+  left: 161px;
+  border-radius: 10px;
+}
+
+/* End menu */
 /*Start Footer*/
 footer {
   background-color: #121212;
