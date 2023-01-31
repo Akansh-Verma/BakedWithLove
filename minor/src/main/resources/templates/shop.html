@@ -74,7 +74,7 @@
 
         <!-- Start cards -->
         <div class="items grid">
-            <div class="card" th:each="product : ${products}">
+            <div class="card" th:each="product,itS : ${products}" th:if="${itS.index}<=5">
                 <div class="card-img">
                     <img class="lazy" loading="lazy" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
                 </div>
@@ -124,6 +124,31 @@
             </div>
         </div>
         <!-- End Menu -->
+               
+        <!-- Start Cards2 -->
+        <div class="grid">
+            <div class="text">
+                <h2>Specialities</h2>
+                <p>
+                    Whether you're in the mood for something 
+                    sweet to start your day, a midday pick-me-up,
+                     or an after-dinner treat, our bakery has something 
+                     for everyone. Come and visit us today to sample some 
+                     of our delectable specialties and discover your new 
+                     favorite pastry!
+                </p>
+            </div>
+            <div class="card2" th:each="product,itS : ${products}" th:if="${itS.index}<3">
+                <div class="img img1"></div>
+                <div class="img img2"></div>
+                <div class="card__content">
+                    <span class="name">John Doe</span>
+                    <span class="job">Software engineer</span>
+                </div>
+            </div>
+        </div>
+        
+        <!-- End Cards2 -->
 
         <!-- <div class="container" style="margin-top: 30px">
             <div class="row">
