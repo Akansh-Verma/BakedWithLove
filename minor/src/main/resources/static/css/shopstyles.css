@@ -865,7 +865,7 @@ header .arrow-down {
   position: absolute;
   width: 100%;
   height: 50%;
-  background: linear-gradient(180deg, rgb(65, 122, 255), rgb(23, 65, 193));
+  /* background: linear-gradient(180deg, rgb(65, 122, 255), rgb(23, 65, 193)); */
   background-size: 100% 200%;
   transition: 0.3s all;
 }
@@ -884,7 +884,7 @@ header .arrow-down {
   height: 100%;
   width: 10px;
   transform: skewX(-10deg);
-  background-image: linear-gradient(to right, rgb(32, 151, 248), rgba(255, 255, 255, 0.9));
+  /* background-image: linear-gradient(to right, rgb(32, 151, 248), rgba(255, 255, 255, 0.9)); */
 }
 
 .card2 .img2 {
