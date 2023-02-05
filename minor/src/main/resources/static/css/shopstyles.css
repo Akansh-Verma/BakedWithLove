@@ -824,6 +824,7 @@ header .arrow-down {
 }
 
 .menu .text p {
+  color: #9a9998;
   text-align: center;
 }
 
@@ -840,12 +841,42 @@ header .arrow-down {
 /* End menu */
 
 /* Start cards2 */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
+  grid-gap: 20px;
+  align-items: stretch;
+}
+.cards2 {
+  position: relative;
+  padding: 15px 15px 15px 15px;
+  right: 50px;
+}
+
+.cards2 .cards-text {
+  
+    padding: 15px 15px 15px 15px;
+    margin-left: 132px;
+}
+
+.cards2 .cards-text p {
+  position: relative;
+  color: #9a9998;
+  overflow-wrap: break-word;
+  padding: 25px 15px 15px 15px;
+  width: 450px;
+  height: 300px;
+  text-align: center;
+  right: 50px;
+}
+
 .card2 {
   border: .05rem solid black;
   height: 210px;
   width: 180px;
   overflow: hidden;
   position: relative;
+  margin-left: 300px;
 }
 
 .card2:hover .img1 {
@@ -884,10 +915,11 @@ header .arrow-down {
   height: 100%;
   width: 10px;
   transform: skewX(-10deg);
-  /* background-image: linear-gradient(to right, rgb(32, 151, 248), rgba(255, 255, 255, 0.9)); */
+  background-image: linear-gradient(to right, rgb(32, 151, 248), rgba(255, 255, 255, 0.9));
 }
 
 .card2 .img2 {
+  display: none;
   bottom: 0;
   right: 0;
   background-position: bottom center;

@@ -126,8 +126,8 @@
         <!-- End Menu -->
                
         <!-- Start Cards2 -->
-        <div class="grid">
-            <div class="text">
+        <div class="grid cards2">
+            <div class="cards-text">
                 <h2>Specialities</h2>
                 <p>
                     Whether you're in the mood for something 
@@ -138,9 +138,13 @@
                      favorite pastry!
                 </p>
             </div>
-            <div class="card2" th:each="product,itS : ${products}" th:if="${itS.index}<3">
-                <div class="img img1" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}"></div>
-                <div class="img img2"  th:src="@{${'/productImages/' + product.imageName}}"></div>
+            <div class="card2" th:each="product,itS : ${products}" th:if="${itS.index}<3"> 
+                <div class="img img1">
+                    <img th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
+                </div>
+                <div class="img img2">
+                    <!-- <img th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}"> -->
+                </div>
                 <div class="card__content">
                     <span class="name" th:text="${product.name}"></span>
                     <span class="job" th:text="${product.price}"></span>
