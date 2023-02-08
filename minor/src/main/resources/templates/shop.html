@@ -138,7 +138,7 @@
                      favorite pastry!
                 </p>
             </div>
-            <div class="card2" th:each="product,itS : ${products}" th:if="${itS.index}<3">
+            <div class="card2" th:each="product,itS : ${products}" th:if="${product.category.id} == 98">
                 <div class="align" >
                     <span class="red"></span>
                     <span class="yellow"></span>
@@ -147,7 +147,9 @@
                 <img th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
                 <h1 th:text="${product.name}"></h1>
                 <p th:text="${product.description}"></p>
+                <p th:text="${product.category.id}"></p>
             </div>
+            
         </div>
         
         <!-- End Cards2 -->
