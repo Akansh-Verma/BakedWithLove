@@ -74,9 +74,9 @@
 
         <!-- Start cards -->
         <div class="items grid">
-            <div class="card" th:each="product,itS : ${products}" th:if="${itS.index}<=5">
+            <div class="card" th:each="product,itS : ${products}" th:if="${itS.index}<5">
                 <div class="card-img">
-                    <img class="lazy" loading="lazy" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
+                    <img class="" th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
                 </div>
                 <div class="card-info">
                   <p class="text-title" th:text="${product.name}"></p>
@@ -147,7 +147,6 @@
                 <img th:src="@{${'/productImages/' + product.imageName}}" th:alt="${product.name}">
                 <h1 th:text="${product.name}"></h1>
                 <p th:text="${product.description}"></p>
-                <p th:text="${product.category.id}"></p>
             </div>
             
         </div>
@@ -238,7 +237,7 @@
         <!--End Copy-Right-->
 
 
-  <script src="js/main.js"></script>
+  <script src="js/main.js" thh></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

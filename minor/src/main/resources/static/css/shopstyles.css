@@ -844,7 +844,7 @@ header .arrow-down {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 2fr));
-  grid-gap: 20px;
+  grid-gap: 40px;
   align-items: stretch;
 }
 .cards2 {
@@ -854,9 +854,8 @@ header .arrow-down {
 }
 
 .cards2 .cards-text {
-  
     padding: 15px 15px 15px 15px;
-    margin-left: 132px;
+    margin-left: 90px;
 }
 
 .cards2 .cards-text p {
@@ -871,7 +870,7 @@ header .arrow-down {
 }
 
 .card2 {
-  width: 250px;
+  width: 309px;
   height: 130px;
   padding: 0.5rem;
   /* background: rgba(198, 198, 198, 0.34); */
@@ -885,15 +884,15 @@ header .arrow-down {
   transition: .4s;
   overflow: hidden;
   color: white;
-  left: 295px;
+  left: 200px;
 }
 
 .card2 img {
-  height: 150px;
-  width: 165px;
+  height: 152px;
+  width: 310px;
 }
 .card2:hover {
-  height: 254px;
+  height: 290px;
   transform: skew(0deg);
 }
 
@@ -936,12 +935,13 @@ header .arrow-down {
   color: rgb(218, 244, 237);
   text-shadow: -10px 5px 10px rgba(0, 0, 0, 0.573);
   top: -150px;
+  font-size: 25px;
 }
 
 .card2 p {
   position: relative;
   color: #000;
-  top: -69px;
+  top: -45px;
 }
 /* End cards2 */
 
