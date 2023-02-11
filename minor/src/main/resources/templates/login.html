@@ -17,19 +17,11 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
         <!--FontAwesome-->
     
-        <link rel="stylesheet" href="css/shopstyles.css">
+        <link rel="stylesheet" href="css/loginstyles.css">
     </head>
 <body>
     <header>
         <nav>
-            <div class="logo">
-                <a href="index.html">Baked With Love</a>
-            </div>
-            <div class="toggle">
-                <span class="first"></span>
-                <span class="middle"></span>
-                <span class="last"></span>
-            </div>
             <div class="navigation-bar">
                 <ul>
                     <li><a th:href="@{/}">Home<span class="underline"></span></a></li>
@@ -39,9 +31,29 @@
             </div>
         </nav>
     </header>
+    <div class="login-box">
+        <p>Login</p>
+        <form>
+          <div class="user-box">
+            <input required="" name="" type="text">
+            <label>Email</label>
+          </div>
+          <div class="user-box">
+            <input required="" name="" type="password">
+            <label>Password</label>
+          </div>
+          <a href="#">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            Submit
+          </a>
+        </form>
+        <p>Don't have an account? <a href="" class="a2">Sign up!</a></p>
+      </div>
 
-
-<div class="container">
+<!-- <div class="container">
     <div class="row">
         <div class="col-sm-6">
             <h2>Login</h2>
@@ -74,7 +86,7 @@
         </div>
 
     </div>
-</div>
+</div> -->
 
 <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
