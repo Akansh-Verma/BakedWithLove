@@ -177,3 +177,7 @@
     color: #aaa;
     border-radius: 5px;
   }
+
+header {
+  background: url(/images/loginpic.png) no;
+}
