@@ -1,3 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+body.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img {
+  max-width: 100%;
+}
+h2 {
+  font-family: 'Herr Von Muellerhoff', cursive;
+  font-size: 100px;
+  font-weight: normal;
+  margin: 0 0 -55px;
+}
+h1, h3 {
+  font-family: "Source Code Pro", sans-serif;
+  font-size: 47px;
+  font-weight: bold;
+  letter-spacing: 9.4px;
+  margin: 0 0 15px;
+}
+p {
+  color: #515151;
+  line-height: 27px;
+}
+.a-CTA {
+  border-bottom: 2px solid #a96700;
+  padding-bottom: 4px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+}
+/*End Global*/
+
+/*Start Mutual*/
+p, .a-CTA, input, header .navigation-bar a, .copyright li, .contact .form form label, .contact .form form button {
+  font-family: Cabin, sans-serif;
+}
+.fa-asterisk, .a-CTA, h2, header .navigation-bar a:hover, header nav.active .navigation-bar a:hover, footer .social-media .links a:hover, .copyright .info li a, .copyright .CTA li a:hover {
+  color: #d5cbba;
+}
+header nav .navigation-bar .underline, header .text .button button:hover, .contact .form form button:hover, .contact .text i:hover {
+  background-color: #a96700;
+}
+header .navigation-bar ul li, header .text, .about-us .text, .reservation .text, .menu .box-model, .menu .text, .fixed-image .text, footer, .copyright, .contact .text i {
+  text-align: center;
+}
+header nav, header .navigation-bar ul, .about-us, .reservation, .about-us .image-container, .reservation .image-container, .menu, .menu .menu-image-container, footer .contact-container, .copyright ul, .contact {
+  display: flex;
+}
+header nav .toggle, header nav .toggle span, header .navigation-bar, header .navigation-bar ul, .menu .box-model .close, footer .social-media .links a, .copyright .CTA li a {
+  transition: .3s;
+}
+header, header nav .toggle span, header .navigation-bar a, header .text, header .text .arrow .left, header .text .arrow .right, .recipes, .menu .box-image-container, .fixed-image .text, .copyright, .copyright .arrow-up {
+  position: relative;
+}
+header nav .toggle, header .navigation-bar .underline, header .text .arrow .left:after, header .text .arrow .right:after, header .svg-down, header .arrow-down, .recipes .text, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .box-image-container .box-image, .copyright .svg-up {
+  position: absolute;
+}
+.recipes .text, .fixed-image .text, .menu .box-image-container, .menu .box-image-container .box-image {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+header nav, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, .menu .box-model, .menu .box-image-container, .menu .box-image-container .box-image {
+  width: 100%;
+}
+button, .dots > div, header nav .toggle, header .arrow-down, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .menu-image-container .image img, footer .newsletter i, .copyright .arrow-up {
+  cursor: pointer;
+}
+.dots .active, header nav.active, header nav.active .toggle.active span, header nav .toggle span, header .navigation-bar .underline, header .text .arrow .left, header .text .arrow .right, header .text .button button, .contact form button {
+  background-color: #fff;
+}
+h1, h3, header .navigation-bar a, header .text span, .menu .box-model .close:hover, footer .text h2, footer .text p, footer .social-media .links a, .contact .text i, .contact .form form button {
+  color: #fff;
+}
+header nav, header .navigation-bar.show, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, header .text .arrow .left:after, .menu .box-model, .copyright .arrow-up {
+  left: 0;
+}
+header .text .arrow .left:after, header .text .arrow .right:after, header .text span, footer .social-media .links a, footer .newsletter i, .copyright .arrow-up, .contact .text i, .contact .form form label {
+  display: inline-block;
+}
+/*End Mutual*/
+
+/*Start Home Page*/
+header nav {
+  position: fixed;
+  top: 0;
+  padding: 36px 36px 20px;
+  z-index: 20;
+}
+header nav .toggle {
+  display: none;
+  top: 26px;
+  left: 20px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  z-index: 21;
+}
+header nav .toggle:focus {
+  outline: none;
+}
+header nav.active .toggle span {
+  background-color: #000;
+}
+header nav .toggle.active {
+  left: 32%;
+}
+header nav .toggle.active .first {
+  top: 16px;
+  transform: rotate(-45deg);
+}
+header nav .toggle.active .last {
+  top: 0;
+  transform: rotate(45deg);
+}
+header nav .toggle .hide {
+  transition: 0s;
+  visibility: hidden;
+}
+header nav .toggle span {
+  display: block;
+  width: 30px;
+  height: 2px;
+  border-radius: 40px;
+}
+header nav .toggle span:not(:last-of-type) {
+  margin-bottom: 6px;
+}
+header nav .logo {
+  flex-basis: 56%;
+  padding-left: 50px;
+}
+header .navigation-bar.show {
+  width: 40%;
+}
+header .navigation-bar.show a {
+  color: #ccc !important;
+}
+header .navigation-bar.show a:hover {
+  color: #fff !important;
+}
+header .navigation-bar ul li {
+  flex: 1;
+  padding: 0 10px;
+}
+header .navigation-bar a {
+  text-decoration: none;
+  transition: all .5s;
+  font-size: 16px;
+}
+header nav.active .navigation-bar a {
+  color: #000;
+}
+header .navigation-bar .underline {
+  height: 2px;
+  width: 0;
+  left: 50%;
+  bottom: -4px;
+  transition: all .3s;
+  display: block;
+}
+
+
 .login-box {
     position: absolute;
     top: 50%;
@@ -179,5 +355,141 @@
   }
 
 header {
-  background: url(/images/loginpic.png) no;
+  background: url(/images/loginpic.png) no-repeat;
+  background-size: cover;
+  padding: 0;
+  margin-bottom: 0;
+  height: 1278px;
+  width: 1597px;
 }
+button {
+  --border-radius: 15px;
+  --border-width: 4px;
+  appearance: none;
+  position: relative;
+  padding: 1em 1em;
+  border: 0;
+  background-color: #212121;
+  font-family: "Roboto", Arial, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  z-index: 2;
+  left: -4px;
+ }
+ 
+ button::after {
+  --m-i: linear-gradient(#000, #000);
+  --m-o: content-box, padding-box;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--border-width);
+  border-radius: var(--border-radius);
+  background-image: conic-gradient(
+     #488cfb,
+     #29dbbc,
+     #ddf505,
+     #ff9f0e,
+     #e440bb,
+     #655adc,
+     #488cfb
+   );
+  -webkit-mask-image: var(--m-i), var(--m-i);
+  mask-image: var(--m-i), var(--m-i);
+  -webkit-mask-origin: var(--m-o);
+  mask-origin: var(--m-o);
+  -webkit-mask-clip: var(--m-o);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  filter: hue-rotate(0);
+  animation: rotate-hue linear 500ms infinite;
+  animation-play-state: paused;
+ }
+ 
+ button:hover::after {
+  animation-play-state: running;
+ }
+ 
+ @keyframes rotate-hue {
+  to {
+   filter: hue-rotate(1turn);
+  }
+ }
+ 
+ button,
+ button::after {
+  box-sizing: border-box;
+ }
+ 
+ button:active {
+  --border-width: 5px;
+ }
+
+.login-box .forgot {
+  position: relative;
+  color: #ccc;
+  bottom: -9px;
+}
+
+.login-box .forgot:hover {
+  background: none;
+  color: #a96700;
+}
+.login-box p .signup {
+  position: relative;
+  color: #ccc;
+}
+
+.login-box p .signup:hover {
+  color: #a96700;
+  background: none;
+}
+
+.login-box h3 {
+  font-size: 20px;
+}
+
+.login-box a{
+  position: relative;
+  color: #ccc;
+}
+
+.login-box a:hover {
+  color: #a96700;
+  background: none;
+}
+
+@media (min-width: 1201px) { 
+  header {
+    width: 1535px;
+    height: 724px;
+  }
+  header nav .logo {
+    position: relative;
+    transition: .45s ease;
+    font-family: Cabin, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 9.4px;
+    margin: 0 0 15px;
+    color: #FFFAFA;
+    text-decoration: none;
+    margin-left: 0;
+    display: flex;
+  }
+  header nav .logo a:visited {
+    color: white;
+  }
+  header nav .logo a:hover {
+    color: #d5cbba;
+  }
+  header nav .navigation-bar {
+   padding-left: 10rem;
+   padding-right: 0;
+  }
+}
+

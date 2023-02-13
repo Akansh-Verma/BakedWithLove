@@ -978,7 +978,7 @@ footer .contact-container h3 {
   font-size: 19px;
   letter-spacing: 1.9px;
 }
-footer .social-media .links a {
+footer .contact-container .social-media .links a {
   margin: 0 10px;
   font-size: 25px;
 }
@@ -997,6 +997,7 @@ footer .newsletter i {
 .copyright {
   padding: 15px 40px 30px;
   background-color: #262526;
+  height: 84px;
 }
 .copyright .svg-up {
   top: 0;
@@ -1005,14 +1006,16 @@ footer .newsletter i {
   margin-top: -50px;
 }
 .copyright .arrow-up {
-  width: 40px;
+  width: 47px;
   height: 30px;
-  top: -45px;
+  top: -79px;
   color: #fff;
   line-height: 1.9
 }
 .copyright ul {
+  position: relative;
   justify-content: center;
+  top: -54px;
 }
 .copyright li {
   color: #919191;
