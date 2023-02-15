@@ -69,7 +69,7 @@
                   <li class="active"><a th:href="@{/}">Home<span class="underline"></span></a></li>
                   <li><a sec:authorize="isAnonymous()" th:href="@{/login}">Login<span class="underline"></span></a></li>
                   <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout<span class="underline"></span></a></li>
-                  <li><a href="#">Blog<span class="underline"></span></a></li>
+                  <li><a th:href="@{/cart}">Cart<span class="underline"></span></a></li>
                   <li><a href="#">Features<span class="underline"></span></a></li>
                   <li><a th:href="@{/shop}">Shop<span class="underline"></span></a></li>
                   <li><a href="#">Contact<span class="underline"></span></a></li>
