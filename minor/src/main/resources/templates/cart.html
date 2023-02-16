@@ -55,22 +55,25 @@
 <!--End Header-->
 
 <!-- Start Product -->
-<section class="product" id="product" >
-    <div class="container" th:each="item, iStat : ${cart}">
+<div>
+    <h2>Shopping Cart</h2>
+    <p><span th:text="${cartCount}"></span> items</p>
+</div>
+<section class="product " id="product" >
+    <div class="container grid-container" th:each="item, iStat : ${cart}">
     <div class="card_box">
         <img th:src="@{${'/productImages/' + item.imageName}}" alt="sample">
         <span></span>
     </div>
-    <div>
-        <h5 th:text="${item.name}"></h5>
-        <p><span th:text="${item.weight}"></span> grams</p>
+    <div class="product-text">
+        <h2 th:text="${item.name}"></h2>
+        <p th:text="${item.description}"></p>
         <p>&#8377;<span th:text="${item.price}"></span></p>
-    </div>
-    <div>
+         <p><span th:text="${item.weight}"></span> grams</p>
         <a href="#!" th:href="@{/cart/removeItem/{index}(index=${iStat.index})}"  type="button" class="card-link-secondary small text-uppercase mr-3"><i
             class="fas fa-trash-alt mr-1"></i> Remove item </a>
     </div>
-</div>
+    </div>
 </section>
 
 <!-- End Product -->
@@ -137,10 +140,10 @@
                 <!--Grid column-->
 
                 <!--Grid column-->
-                <div class="col-lg-4">
+                <!-- <div class="col-lg-4"> -->
 
                     <!-- Card -->
-                    <div class="card mb-4">
+                    <!-- <div class="card mb-4">
                         <div class="card-body">
 
                             <h5 class="mb-3">The total amount </h5>
@@ -169,11 +172,11 @@
                                 checkout</a>
 
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Card -->
 
                     <!-- Card -->
-                    <div class="card mb-4">
+                    <!-- <div class="card mb-4">
                         <div class="card-body">
 
                             <a class="dark-grey-text d-flex justify-content-between" data-toggle="collapse" href="#collapseExample"
@@ -191,21 +194,32 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <!-- Card -->
 
-                </div>
+                <!-- </div> -->
                 <!--Grid column-->
 
-            </div>
+            <!-- </div> -->
             <!--Grid row-->
 
-        </section>
+        <!-- </section> -->
         <!--Section: Block Content-->
 
-    </div>
-</main>
+    <!-- </div> -->
+<!-- </main> -->
 <!--Main layout-->
+
+<section class="summary">
+    <h2>Order Summary</h2>
+    <div class="card">
+        <div class="card-details">
+            <p class="text-title">Card title</p>
+            <p class="text-body">Here are the details of the card</p>
+          </div>
+          <button class="card-button">More info</button>
+    </div>
+</section>
 
 <!--Start Footer-->
 <footer>
