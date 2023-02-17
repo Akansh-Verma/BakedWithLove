@@ -121,9 +121,7 @@ header nav .toggle:focus {
 header nav.active .toggle span {
   background-color: #000;
 }
-header nav.active .logo {
-  background-color: #000;
-}
+
 header nav .toggle.active {
   left: 32%;
 }
@@ -173,6 +171,9 @@ header .navigation-bar a {
 header nav.active .navigation-bar a {
   color: #000;
 }
+header nav.active .logo a {
+  color:#000
+}
 header .navigation-bar .underline {
   height: 2px;
   width: 0;
@@ -182,10 +183,25 @@ header .navigation-bar .underline {
   display: block;
 }
 
- 
+
 /*End Header*/
 
 /* Start Product */
+
+.count h2 {
+  position: relative;
+  left: 126px;
+  margin-top: 10px;
+  padding: 5px;
+}
+.count p {
+  position: relative;
+  left : 700px;
+  font-size: 65px;
+  bottom: 105px;
+  color: #ccc;
+}
+
 .container {
   position: relative;
   display: grid;
@@ -291,8 +307,20 @@ header .navigation-bar .underline {
 /* End Product */
 
 /* Start summary */
+.summary {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.summary h2 {
+  position: relative;
+  left: 125px;
+  margin-top: 10px;
+  padding: 10px;
+}
 .card {
-  width: 190px;
+  width: 250px;
   height: 254px;
   border-radius: 20px;
   background: #f5f5f5;
@@ -301,6 +329,10 @@ header .navigation-bar .underline {
   border: 2px solid #c3c6ce;
   transition: 0.5s ease-out;
   overflow: visible;
+  padding: 15px;
+  margin-top: 20px;
+  left: 130px;
+  margin-bottom: 20px;
  }
  
  .card-details {
@@ -311,30 +343,24 @@ header .navigation-bar .underline {
   place-content: center;
  }
  
- .card-button {
-  transform: translate(-50%, 125%);
-  width: 60%;
-  border-radius: 1rem;
-  border: none;
-  background-color: #008bf8;
-  color: #fff;
-  font-size: 1rem;
-  padding: .5rem 1rem;
-  position: absolute;
-  left: 50%;
-  bottom: 0;
-  opacity: 0;
-  transition: 0.3s ease-out;
- }
- 
  .text-body {
+  position: relative;
   color: rgb(134, 134, 134);
+  font-size: 24px;
+  bottom: 33px;
+ }
+ .text-total {
+  position: relative;
+  color: rgb(134, 134, 134);
+  font-size: 24px;
+  bottom: 21px;
  }
  
  /*Text*/
  .text-title {
-  font-size: 1.5em;
+  font-size: 1.8em;
   font-weight: bold;
+  color: #9f9f9f;
  }
  
  /*Hover*/
@@ -347,6 +373,59 @@ header .navigation-bar .underline {
   transform: translate(-50%, 50%);
   opacity: 1;
  }
+
+ .cta {
+  position: relative;
+  margin-bottom: 20px;
+  left: 130px;
+  border: none;
+  background: none;
+}
+
+.cta span {
+  padding-bottom: 7px;
+  letter-spacing: 4px;
+  font-size: 14px;
+  padding-right: 15px;
+  text-transform: uppercase;
+}
+
+.cta svg {
+  transform: translateX(-8px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active svg {
+  transform: scale(0.9);
+}
+
+.hover-underline-animation {
+  position: relative;
+  color: black;
+  padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000000;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.cta:hover .hover-underline-animation:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
 /* End summary */
 
 /*Start Footer*/
@@ -456,7 +535,10 @@ footer .newsletter i {
     margin-left: 0;
     display: flex;
   }
-  header nav .logo a:visited {
+  header nav .logo a {
+    color: white;
+  }
+  header nav .logo a:active{
     color: white;
   }
   header nav .logo a:hover {

@@ -712,6 +712,10 @@ header .arrow-down {
   background: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988515/arrow-down.png") no-repeat center;
 }
 
+header nav.active .logo a {
+  color:#000
+}
+
 /*End Header*/
 
 /*Start About-Us*/
@@ -990,7 +994,10 @@ footer .newsletter i {
     margin-left: 0;
     display: flex;
   }
-  header nav .logo a:visited {
+  header nav .logo a {
+    color: rgb(255, 255, 255);
+  }
+  header nav .logo a:active{
     color: white;
   }
   header nav .logo a:hover {
