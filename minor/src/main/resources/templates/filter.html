@@ -1,25 +1,63 @@
 <!DOCTYPE html>
-<html xmlns:th="www.thymeleaf.org">
+<html xmlns:th="www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
-<meta charset="ISO-8859-1">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-eMNCOe7tC1doHpGoWe/6oMVemdAVTMs2xqW4mwXrXsW0L84Iytr2wi5v2QjrP/xp" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js" integrity="sha384-cn7l7gDp0eyniUwwAZgrzD06kc/tftFf19TOAs2zVinnD/C7E91j9yyk5//jjpt/" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<title>SEARCH</title>
-<style>
-  body{
-      background-image: url(https://wallpapercave.com/wp/uDIy1Pt.jpg);
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-position: relative;
-      background-size: 100% 100%;
-      height: 50%;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Baked With Love</title>
+  <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+
+  <!-- Place favicon.ico in the root directory -->
+  <link rel="shortcut icon" href="images/e.png">
+
+  <!-- Boxicons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <!-- Boxicons -->
+  <!--Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
+  <!--Fonts-->
+
+  <!--FontAwesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+  <!--FontAwesome-->
+
+  <link rel="stylesheet" href="css/filter.css">
 </head>
-<body>
-<div class="container mt-5">
+<body class="stop-scroll">
+  <header>
+    <div class="video-container">
+    <video autoplay loop muted class="filter-video">
+    <source src="/images/filter_video.mp4" type="video/mp4">
+  </video>
+  </div>
+    <nav>
+        <div class="logo">
+            <a href="index.html">Baked With Love</a>
+        </div>
+        <div class="toggle">
+            <span class="first"></span>
+            <span class="middle"></span>
+            <span class="last"></span>
+        </div>
+        <div class="navigation-bar">
+            <ul>
+                <li class="active"><a th:href="@{/}">Home<span class="underline"></span></a></li>
+                <li><a sec:authorize="isAnonymous()" th:href="@{/login}">Login<span class="underline"></span></a></li>
+                <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout<span class="underline"></span></a></li>
+                <li><a th:href="@{/cart}">Cart<span class="underline"></span></a></li>
+                <li><a href="#">Features<span class="underline"></span></a></li>
+                <li><a th:href="@{/shop}">Shop<span class="underline"></span></a></li>
+                <li><a href="#">Contact<span class="underline"></span></a></li>
+            </ul>
+        </div>
+    </nav>      
+</header>
+
+<!-- <section class="video">
+  <video autoplay loop muted class="filter-video">
+    <source src="/images/filter_video.mp4" type="video/mp4">
+  </video>
+</section> -->
+<!-- <div class="container mt-5">
 <h2 position="center">Search Your Product</h2>
   <form th:action="@{/filter}" method="get">
   <input type="text" name="keyword" th:value="${keyword}"  placeholder="Find by Name" size="50" >
@@ -51,6 +89,84 @@
       </tr>
     </tbody>
   </table>
+</div> -->
+
+<section class="products">
+  <h2>Search Products</h2>
+  <form th:action="@{/filter}" method="get" class="filter">
+    <input placeholder="Username" type="text" class="input" required="" name="keyword" th:value="${keyword}">
+    <button class="btn" type="submit" > Search   </button>
+    </form>
+    <div class="grid-container">
+      <div class="card" th:each="l : ${list}" th:field="${1}">
+    <div class="card-img"></div>
+      <div class="card-info">
+        <div class="card-text">
+          <p class="text-title">This is a title</p>
+          <p class="text-subtitle">This is a subtitle</p>
+        </div>
+        <div class="card-icon">
+          <svg viewBox="0 0 28 25">
+            <path d="M13.145 2.13l1.94-1.867 12.178 12-12.178 12-1.94-1.867 8.931-8.8H.737V10.93h21.339z"></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    </div>
+</section>
+
+<!--Start Footer-->
+<footer>
+  <div class="text">
+      <h2>ABOUT BAKED WITH LOVE</h2>
+      <div><i class="fas fa-asterisk"></i></div>
+      <p>
+        Baked With Love is a SpringBoot powered website
+        which provides you with multiple functionalities.
+        Making sure all the features of an e-commerce web application, 
+        this online bakery web application (Baked with Love) acts as a 
+        central database containing various bakery products. 
+      </p>
+  </div>
+  <div class="contact-container">
+    <div class="social-media">
+        <h3>Follow Along</h3>
+        <div class="links">
+            <a href="#"><i class='bx bxl-github'></i></a>
+            <a href="#"><i class='bx bxl-linkedin'></i></a>
+            <a href="#"><i class='bx bxl-instagram' ></i></a>
+            <a href="#"><i class='bx bx-link-external' ></i></a>
+        </div>
+    </div>
+       <!-- <div class="newsletter">
+        <h3>NewsLetter</h3>
+          <form method="post">
+              <input type="email" name="email" placeholder="Type Your Email">
+              <i class="fas fa-envelope"></i>
+          </form>
+      </div> -->
+  </div> 
+</footer>
+<!--End Footer-->
+
+<!--Start Copy-Right-->
+<div class="copyright">
+  <svg class="svg-up" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="#262526" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+  <i class='bx bx-chevrons-up arrow-up bx-lg' ></i>
+  <ul class="info">
+      <li>&copy; Baked With Love 2022</li>
+      <li>UPES</li>
+      <li>Tel: 123</li>
+      <li>Handcrafted with love by <a href="https://github.com/Akansh-Verma/BakedWithLove">BakedWithLove</a> Team</li>
+  </ul>
+  <!-- <ul class="CTA">
+      <li><a href="#">PERMISSIONS AND COPYRIGHT</a></li>
+      <li><a href="#">CONTACT THE TEAM</a></li>
+  </ul> -->
 </div>
+<!--End Copy-Right-->
+
+  <script src="js/main.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 </html>
