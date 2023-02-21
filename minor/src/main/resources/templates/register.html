@@ -1,50 +1,84 @@
 <!doctype html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
-          integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-          <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" >
-          <link rel="stylesheet" type ="text/css" th:href="@{/css/styles.css}" >
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Baked With Love</title>
+    <meta name="viewport" content="width = device-width, initial-scale = 1, shrink-to-fit = no">
+  
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="shortcut icon" href="images/e.png">
+  
+    <!-- Boxicons -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <!-- Boxicons -->
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro" rel="stylesheet">
+    <!--Fonts-->
+  
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--FontAwesome-->
+  
+    <link rel="stylesheet" href="css/register.css">
 </head>
-<link rel = "icon" href = "https://i.pinimg.com/originals/f0/0b/fe/f00bfe72083c7dbb32cae4f0bed1281b.jpg" type = "image/x-icon">
-<body>
 
+<body class="stop-scroll">
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">Baked With Love</a>
+            </div>
+            <div class="toggle">
+                <span class="first"></span>
+                <span class="middle"></span>
+                <span class="last"></span>
+            </div>
+            <div class="navigation-bar">
+                <ul>
+                    <li><a th:href="@{/}">Home<span class="underline"></span></a></li>
+                    <li><a sec:authorize="isAnonymous()" th:href="@{/login}">Login<span class="underline"></span></a></li>
+                    <li><a sec:authorize="isAuthenticated()" th:href="@{/logout}">Logout<span class="underline"></span></a></li>
+                    <li><a th:href="@{/cart}">Cart<span class="underline"></span></a></li>
+                    <li class="active"><a th:href="@{/register}">Register<span class="underline"></span></a></li>
+                    <li><a th:href="@{/shop}">Shop<span class="underline"></span></a></li>
+                    <li><a href="#">Contact<span class="underline"></span></a></li>
+                </ul>
+            </div>
+        </nav> 
+        <div class="container">
+            <form th:action="@{/register}" th:object="${user}" method="post">
+                <div class="card">
+                <a class="singup">Sign Up</a>
+                <div class="inputBox1">
+                    <input  type="text" name="firstName" id="firstName" required>
+                    <span class="user">First Name</span>
+                </div>
+    
+                <div class="inputBox">
+                    <input type="text" name="lastName" id="lastName" required>
+                    <span>Last Name</span>
+                </div>
+    
+                <div class="inputBox">
+                    <input type="email" required minlength="6" name="email" id="email">
+                    <span>Email Address</span>
+                </div>
+    
+                <div class="inputBox">
+                    <input type="password" required name="password" id="password">
+                    <span>Password</span>
+                </div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-transparent" >
-    <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-            <img th:src="@{/images/logo.png}"  src="../static/images/logo.png" width="auto" height="70" class="d-inline-block align-top" alt=""/>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <button class="enter" type="submit" value="Register">Register</button>
+                <span class="account">Already have an account <a th:href="@{/login}">Login here</a></span>
+            </div>
+            </form>
+            
+        </div>     
+    </header>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto"></ul>
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/}" href="#">Home</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" th:href="@{/shop}" href="#">Shop</a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Sign Up</a>
-                </li>
-
-            </ul>
-
-        </div>
-    </div>
-</nav>
-<div class="container">
+<!-- <div class="container">
     <div class="col-sm-6">
         <h3 style="margin-top: 10px">Sign Up Now</h3>
         <p>Please fill out this to register</p>
@@ -75,11 +109,60 @@
                                                                       th:href="@{/login}">Login here</a></span>
         </form>
     </div>
-</div>
+</div> -->
 
-
-<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<!--Start Footer-->
+<footer>
+    <div class="text">
+        <h2>ABOUT BAKED WITH LOVE</h2>
+        <div><i class="fas fa-asterisk"></i></div>
+        <p>
+          Baked With Love is a SpringBoot powered website
+          which provides you with multiple functionalities.
+          Making sure all the features of an e-commerce web application, 
+          this online bakery web application (Baked with Love) acts as a 
+          central database containing various bakery products. 
+        </p>
+    </div>
+    <div class="contact-container">
+      <div class="social-media">
+          <h3>Follow Along</h3>
+          <div class="links">
+              <a href="#"><i class='bx bxl-github'></i></a>
+              <a href="#"><i class='bx bxl-linkedin'></i></a>
+              <a href="#"><i class='bx bxl-instagram' ></i></a>
+              <a href="#"><i class='bx bx-link-external' ></i></a>
+          </div>
+      </div>
+         <!-- <div class="newsletter">
+          <h3>NewsLetter</h3>
+            <form method="post">
+                <input type="email" name="email" placeholder="Type Your Email">
+                <i class="fas fa-envelope"></i>
+            </form>
+        </div> -->
+    </div> 
+  </footer>
+  <!--End Footer-->
+  
+  <!--Start Copy-Right-->
+  <div class="copyright">
+    <svg class="svg-up" width="192" height="61" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 160.7 61.5" enable-background="new 0 0 160.7 61.5" xml:space="preserve"><path fill="#262526" d="M80.3,61.5c0,0,22.1-2.7,43.1-5.4s41-5.4,36.6-5.4c-21.7,0-34.1-12.7-44.9-25.4S95.3,0,80.3,0c-15,0-24.1,12.7-34.9,25.4S22.3,50.8,0.6,50.8c-4.3,0-6.5,0,3.5,1.3S36.2,56.1,80.3,61.5z"></path></svg>
+    <i class='bx bx-chevrons-up arrow-up bx-lg' ></i>
+    <ul class="info">
+        <li>&copy; Baked With Love 2022</li>
+        <li>UPES</li>
+        <li>Tel: 123</li>
+        <li>Handcrafted with love by <a href="https://github.com/Akansh-Verma/BakedWithLove">BakedWithLove</a> Team</li>
+    </ul>
+    <!-- <ul class="CTA">
+        <li><a href="#">PERMISSIONS AND COPYRIGHT</a></li>
+        <li><a href="#">CONTACT THE TEAM</a></li>
+    </ul> -->
+  </div>
+  <!--End Copy-Right-->
+  
+    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
 </body>
 </html>
