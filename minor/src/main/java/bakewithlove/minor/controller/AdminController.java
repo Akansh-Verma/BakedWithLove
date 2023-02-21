@@ -73,7 +73,7 @@ public class AdminController {
         }
         else
         {
-            return "404";
+            return "error";
         }
     }
     
