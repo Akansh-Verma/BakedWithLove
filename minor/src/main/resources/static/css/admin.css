@@ -1,0 +1,965 @@
+* {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  body.hide-scroll::-webkit-scrollbar {
+    display: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  img {
+    max-width: 100%;
+  }
+  h2 {
+    font-family: 'Herr Von Muellerhoff', cursive;
+    font-size: 100px;
+    font-weight: normal;
+    margin: 0 0 -55px;
+  }
+  h1, h3 {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 47px;
+    font-weight: bold;
+    letter-spacing: 9.4px;
+    margin: 0 0 15px;
+  }
+  p {
+    color: #515151;
+    line-height: 27px;
+  }
+  .a-CTA {
+    border-bottom: 2px solid #a96700;
+    padding-bottom: 4px;
+    letter-spacing: 1.5px;
+    font-size: 18px;
+  }
+  /*End Global*/
+  
+  /*Start Mutual*/
+  p, .a-CTA, input, header .navigation-bar a, .copyright li, .contact .form form label, .contact .form form button {
+    font-family: Cabin, sans-serif;
+  }
+  .fa-asterisk, .a-CTA, h2, header .navigation-bar a:hover, header nav.active .navigation-bar a:hover, footer .social-media .links a:hover, .copyright .info li a, .copyright .CTA li a:hover {
+    color: #d5cbba;
+  }
+  header nav .navigation-bar .underline, header .text .button button:hover, .contact .form form button:hover, .contact .text i:hover {
+    background-color: #a96700;
+  }
+  header .navigation-bar ul li, header .text, .about-us .text, .reservation .text, .menu .box-model, .menu .text, .fixed-image .text, footer, .copyright, .contact .text i {
+    text-align: center;
+  }
+  header nav, header .navigation-bar ul, .about-us, .reservation, .about-us .image-container, .reservation .image-container, .menu, .menu .menu-image-container, footer .contact-container, .copyright ul, .contact {
+    display: flex;
+  }
+  header nav .toggle, header nav .toggle span, header .navigation-bar, header .navigation-bar ul, .menu .box-model .close, footer .social-media .links a, .copyright .CTA li a {
+    transition: .3s;
+  }
+  header, header nav .toggle span, header .navigation-bar a, header .text, header .text .arrow .left, header .text .arrow .right, .recipes, .menu .box-image-container, .fixed-image .text, .copyright, .copyright .arrow-up {
+    position: relative;
+  }
+  header nav .toggle, header .navigation-bar .underline, header .text .arrow .left:after, header .text .arrow .right:after, header .svg-down, header .arrow-down, .recipes .text, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .box-image-container .box-image, .copyright .svg-up {
+    position: absolute;
+  }
+  .recipes .text, .fixed-image .text, .menu .box-image-container, .menu .box-image-container .box-image {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  header nav, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, .menu .box-model, .menu .box-image-container, .menu .box-image-container .box-image {
+    width: 100%;
+  }
+  button, .dots > div, header nav .toggle, header .arrow-down, .menu .box-model .close, .menu .box-model .arrow .arrow-right,.menu .box-model .arrow .arrow-left, .menu .menu-image-container .image img, footer .newsletter i, .copyright .arrow-up {
+    cursor: pointer;
+  }
+  .dots .active, header nav.active, header nav.active .toggle.active span, header nav .toggle span, header .navigation-bar .underline, header .text .arrow .left, header .text .arrow .right, header .text .button button, .contact form button {
+    background-color: #fff;
+  }
+  h1, h3, header .navigation-bar a, header .text span, .menu .box-model .close:hover, footer .text h2, footer .text p, footer .social-media .links a, .contact .text i, .contact .form form button {
+    color: #fff;
+  }
+  header nav, header .navigation-bar.show, header .navigation-bar a:hover .underline, header .navigation-bar li.active .underline, header .text .arrow .left:after, .menu .box-model, .copyright .arrow-up {
+    left: 0;
+  }
+  header .text .arrow .left:after, header .text .arrow .right:after, header .text span, footer .social-media .links a, footer .newsletter i, .copyright .arrow-up, .contact .text i, .contact .form form label {
+    display: inline-block;
+  }
+  /*End Mutual*/
+
+  /*Start Header*/
+  header {
+    height: calc(165vh - 22px);
+    background-size: cover;
+    background: url(/images/admin-home.png) no-repeat;
+    padding: 20px 70px;
+  }
+
+  header nav {
+    position: fixed;
+    top: 0;
+    padding: 36px 36px 20px;
+    z-index: 20;
+  }
+  header nav .toggle {
+    display: none;
+    top: 26px;
+    left: 20px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    z-index: 21;
+  }
+  header nav .toggle:focus {
+    outline: none;
+  }
+  header nav.active .toggle span {
+    background-color: #000;
+  }
+  header nav .toggle.active {
+    left: 32%;
+  }
+  header nav .toggle.active .first {
+    top: 16px;
+    transform: rotate(-45deg);
+  }
+  header nav .toggle.active .last {
+    top: 0;
+    transform: rotate(45deg);
+  }
+  header nav .toggle .hide {
+    transition: 0s;
+    visibility: hidden;
+  }
+  header nav .toggle span {
+    display: block;
+    width: 30px;
+    height: 2px;
+    border-radius: 40px;
+  }
+  header nav .toggle span:not(:last-of-type) {
+    margin-bottom: 6px;
+  }
+  header nav .logo {
+    flex-basis: 56%;
+    padding-left: 50px;
+  }
+  header .navigation-bar.show {
+    width: 40%;
+  }
+  header .navigation-bar.show a {
+    color: #ccc !important;
+  }
+  header .navigation-bar.show a:hover {
+    color: #fff !important;
+  }
+  header .navigation-bar ul li {
+    flex: 1;
+    padding: 0 10px;
+  }
+  header .navigation-bar a {
+    text-decoration: none;
+    transition: all .5s;
+    font-size: 16px;
+  }
+  header nav.active .navigation-bar a {
+    color: #000;
+  }
+  header .navigation-bar .underline {
+    height: 2px;
+    width: 0;
+    left: 50%;
+    bottom: -4px;
+    transition: all .3s;
+    display: block;
+  }
+  header .text {
+    top: 24%;
+  }
+  header .text h1 {
+    margin-bottom: 0;
+  }
+  header .text .arrow .left, header .text .arrow .right {
+    height: 3px;
+    width: 100px;
+  }
+  header .text .arrow .left {
+    left: -4%;
+  }
+  header .text .arrow .right {
+    right: -4%;
+  }
+  header .text .arrow .left:after, header .text .arrow .right:after {
+    content: '';
+    border: 10px solid transparent;
+    border-left-color: #fff;
+    top: -8px;
+  }
+  header .text .arrow .right:after {
+    right: 0;
+    border-color: transparent #fff transparent transparent;
+  }
+  header .text .arrow .fa-asterisk {
+    vertical-align: super;
+  }
+  header .text span {
+    font-family: "Source Code Pro", sans-serif;
+    font-size: 15px;
+    margin-bottom: 12px;
+  }
+  header .text .button button, .contact form button {
+    border: none;
+    padding: 9px 18px;
+    letter-spacing: 2.4px;
+    font-size: 12px;
+    font-family: source_sans_problack, sans-serif;
+    border-radius: 3px;
+  }
+  header .text .button button, .contact form button:focus {
+    outline: none;
+  }
+  
+  header nav.active .logo a {
+    color:#000
+  }
+
+/*End Header*/
+
+/* Start card */
+.grid-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100px;
+    top: 250px;
+    left: 350px;
+    column-gap: 250px;
+}
+
+.card {
+    width: 190px;
+    height: 254px;
+    background: #07182E;
+    position: relative;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .card h2 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-size: 2em;
+    font-family: sans-serif;
+    bottom: 30px;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .card::after {
+    content: '';
+    position: absolute;
+    background: #07182E;
+    ;
+    inset: 5px;
+    border-radius: 15px;
+  }  
+  /* .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  } */
+  
+  .card h2:hover {
+        color: #a96700;
+  }
+  
+/* End card */
+
+/* Start Table styles */
+.add {
+    position: relative;
+    font-size: 1.2em;
+    padding: 0.7em 1.4em;
+    background-color: #BF0426;
+    text-decoration: none;
+    border: none;
+    border-radius: 0.5em;
+    color: #DEDEDE;
+    box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+    left: 50px;
+    top: 5px;
+  }
+  
+  .add::before {
+    position: absolute;
+    content: '';
+    height: 0;
+    width: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(135deg, rgba(33,33,33,1) 0%, rgba(33,33,33,1) 50%, rgba(150,4,31,1) 50%, rgba(191,4,38,1) 60%);
+    border-radius: 0 0 0.5em 0;
+    box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+  }
+  
+ .add:hover::before {
+    width: 1.6em;
+    height: 1.6em;
+  }
+  
+  .add:active {
+    box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+    transform: translate(0.1em, 0.1em);
+  }
+table {
+    border-collapse: unset !important;
+    border-spacing: 0px 10px;
+  }
+  
+  .table-content-table {
+    margin: 20px;
+    padding: 0px 10px;
+    background: #F8F8F8;
+    border: 1px solid #F1F1F1;
+    border-radius: 5px;
+  }
+  
+  .th-actions {
+    width: 300px; /* changes as needed */
+    text-align: center;
+  }
+  
+  .table-thead-tr th {
+    color: #7D7D7D;
+    font-weight: normal;
+  }
+  
+  .table-tbody-tr td {
+    background: #FFF; 
+    border: 1px solid #FFF;
+  }
+  
+  .table-tbody-tr td:first-child {
+    border-radius: 5px 0 0 5px;
+    padding: 10px;
+    width: 130px;
+  }
+  .table-tbody-tr td:last-child {
+    border-radius: 0 5px 5px 0;
+    text-align: end;
+    padding: 10px;
+  }
+/* End Table styles */
+
+/* Start add category */
+.add-categ form input {
+  position: relative;
+  border: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  background: #e8e8e8;
+  box-shadow: 20px 20px 60px #c5c5c5,
+     -20px -20px 60px #ffffff;
+  transition: 0.3s;
+  left: 30px;
+  margin: 15px;
+ }
+ 
+ .add-categ form input:focus {
+  outline-color: #e8e8e8;
+  background: #e8e8e8;
+  box-shadow: inset 20px 20px 60px #c5c5c5,
+     inset -20px -20px 60px #ffffff;
+  transition: 0.3s;
+ }
+ .add-categ .buttonDownload {
+  display: inline-block;
+  position: relative;
+  padding: 10px 25px;
+  background-color: #4CC713;
+  color: white;
+  font-family: sans-serif;
+  text-decoration: none;
+  font-size: 0.9em;
+  text-align: center;
+  text-indent: 15px;
+  border: none;
+  border-radius: 2em;
+  font-weight: bold;
+  left: 30px;
+}
+
+.buttonDownload:hover {
+  background-color: #1a60a2;
+  color: white;
+}
+
+.buttonDownload:before, .buttonDownload:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: 15px;
+  top: 52%;
+}
+
+.buttonDownload:before {
+  width: 14px;
+  height: 2px;
+  border-style: solid;
+  border-width: 0 2px 2px;
+}
+
+.buttonDownload:after {
+  width: 0;
+  height: 0;
+  margin-left: 3px;
+  margin-top: -7px;
+  border-style: solid;
+  border-width: 4px 4px 0 4px;
+  border-color: transparent;
+  border-top-color: inherit;
+  animation: downloadArrow 1s linear infinite;
+  animation-play-state: paused;
+}
+
+.buttonDownload:hover:before {
+  border-color: #bdd3ef;
+}
+
+.buttonDownload:hover:after {
+  border-top-color: #eff1f7;
+  animation-play-state: running;
+}
+
+@keyframes downloadArrow {
+  0% {
+    margin-top: -7px;
+    opacity: 1;
+  }
+
+  0.001% {
+    margin-top: -15px;
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    margin-top: 0;
+    opacity: 0.4;
+  }
+}
+
+/* End add category */
+
+/* Start add products */
+.add-prod a {
+  display: flex;
+  position: relative;
+  text-decoration: none;
+  left: 20px;
+  margin: 15px;
+  width: 20px;
+}
+.cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  padding: 0.7em 1.4em 0.7em 1.1em;
+  color: white;
+  background: #ad5389;
+  background: linear-gradient(0deg, rgba(20,167,62,1) 0%, rgba(102,247,113,1) 100%);
+  border: none;
+  box-shadow: 0 0.7em 1.5em -0.5em #14a73e98;
+  letter-spacing: 0.05em;
+  border-radius: 20em;
+ }
+ 
+ .cssbuttons-io-button svg {
+  margin-right: 6px;
+ }
+ 
+ .cssbuttons-io-button:hover {
+  box-shadow: 0 0.5em 1.5em -0.5em #14a73e98;
+ }
+ 
+ .cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #14a73e98;
+ }
+ .table-flex {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: 1 1 auto;
+  
+  margin: 20px;
+  padding: 10px;
+  background: #F8F8F8;
+  border: 1px solid #F1F1F1;
+  border-radius: 5px;
+}
+.tabel-thead, .table-tbody {
+  display: flex;
+  flex-flow: row nowrap; 
+}
+
+.td-img { /* firts item of cell */
+  width: 120px;
+}
+
+.td {
+  width: 150px; /* change fix value as needed */
+}
+
+.td-flex {
+  display: flex;
+  justify-content: center; 
+  flex: 1 1 auto; /* fits according to space */
+}
+
+.td-last { /* Last item of cell */
+  width: 280px; 
+  display: flex;
+  gap: 10px;
+}
+
+.tabel-thead {
+  color: #7D7D7D;
+  padding: 0px 10px;
+}
+
+.table-tbody {
+  align-items: center;
+}
+
+.table-tbody {
+  padding: 12px;
+  background: #FFFFFF;
+  border: 1px solid #F1F1F1;
+  border-radius: 5px;
+}
+
+
+/* ---- image on row ----- */
+img {
+  width: 80px;
+  height: 80px;
+  border-radius: 5px;
+  background: #000;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+/* End add products */
+/*Start Footer*/
+footer {
+    background-color: #121212;
+    padding: 60px 20px;
+  }
+  footer .text {
+    max-width: 500px;
+    margin: auto;
+  }
+  footer .text h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 19px;
+    letter-spacing: 1.9px;
+    margin-bottom: 25px;
+  }
+  footer .text .fa-asterisk {
+    font-size: 12px;
+  }
+  footer .text p {
+    line-height: 27px;
+  }
+  footer .contact-container {
+    padding: 40px 0;
+    max-width: 1000px;
+    margin: auto;
+  }
+  footer .contact-container > div {
+    flex: 1;
+  }
+  footer .contact-container h3 {
+    font-size: 19px;
+    letter-spacing: 1.9px;
+  }
+  footer .contact-container .social-media .links a {
+    margin: 0 10px;
+    font-size: 25px;
+  }
+  footer .newsletter input {
+    padding: 10px;
+    width: 270px;
+    background-color: #eee;
+    border: none;
+    margin-left: -15px;
+  }
+  footer .newsletter i {
+    margin-left: -40px;
+    vertical-align: middle;
+    font-size: 21px;
+  }
+  .copyright {
+    padding: 15px 40px 30px;
+    background-color: #262526;
+    height: 84px;
+  }
+  .copyright .svg-up {
+    top: 0;
+    left: 50%;
+    margin-left: -96px;
+    margin-top: -50px;
+  }
+  .copyright .arrow-up {
+    width: 47px;
+    height: 30px;
+    top: -79px;
+    color: #fff;
+    line-height: 1.9
+  }
+  .copyright img {
+    color: white;
+  }
+  .copyright ul {
+    position: relative;
+    justify-content: center;
+    top: -54px;
+  }
+  .copyright li {
+    color: #919191;
+    font-size: 14px;
+  }
+  .copyright li:not(:last-of-type):after {
+    content: '•';
+    margin: 10px;
+  }
+  .copyright .CTA {
+    margin-top: 25px;
+  }
+  .copyright .CTA li a {
+    color: #919191;
+  }
+  
+  /*End Footer*/
+  
+  /*End Home Page*/
+  
+  /*Start Contact Page*/
+  .contact-header {
+    background-image: url("https://res.cloudinary.com/abdel-rahman-ali/image/upload/v1535988526/contact-food.jpg");
+    height: 40vh;
+  }
+  .contact {
+    padding: 78px 40px;
+  }
+  .contact > div {
+    flex: 50%;
+  }
+  .contact .text p {
+    margin-bottom: 30px;
+  }
+  .contact .text i {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 50%;
+    line-height: 48px;
+    font-size: 24px;
+  }
+  .contact .text h2 {
+    font-family: source_sans_problack, sans-serif;
+    font-size: 24px;
+    color: #262626;
+    letter-spacing: 2.4px;
+    margin-bottom: 20px;
+  }
+  .contact .form {
+    margin-left: 48px;
+  }
+  .contact .form form label {
+    margin-bottom: 5px;
+    color: #515151;
+  }
+  .contact .form form input, .contact .form form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 24px;
+    border-radius: 5px;
+    border: 2px solid #D8D8D8;
+    outline: none;
+  }
+  .contact .form form input:focus, .contact .form form textarea:focus {
+    border-color: #a96700;
+    box-shadow: 0 1px 1px #737373;
+  }
+  .contact .form form textarea {
+    height: 212px;
+    resize: none;
+  }
+  .contact .form form button {
+    background-color: #262526;
+    padding: 12px 30px;
+    font-size: 12px;
+  }
+  /*End Contact Page*/
+  
+  /*Start Home Page Responsive*/
+  @media screen and (min-width: 1201px) {
+    
+    header nav .logo {
+      position: relative;
+      transition: .45s ease;
+      font-family: Cabin, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 9.4px;
+      margin: 0 0 15px;
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 0;
+      display: flex;
+    }
+    header .navigation-bar a {
+      color: #ffffff;
+    }
+    header nav .logo a {
+      color: rgb(255, 255, 255);
+    }
+    header nav .logo a:active{
+      color: white;
+    }
+    header nav .logo a:hover {
+      color: #d5cbba;
+    }
+    header nav .navigation-bar {
+     padding-left: 10rem;
+     padding-right: 0;
+    }
+    .about-us .image-container .image1{
+      width: 352px;
+      height: 100%;
+    }
+    .about-us .image-container .image2 {
+      width: 297px;
+      height: 100%;
+    }
+    footer .social-media .links a {
+      color: white;
+    }
+  }
+  
+  @media (max-width: 1200px) {
+    *{
+      padding: 0;
+      margin: 0;
+    }
+    .menu, .about-us, .reservation {
+        padding: 60px 40px;
+    }
+    .about-us .text, .reservation .text {
+        padding: 0 32px 0 0;
+    }
+    .about-us .image-container, .reservation .image-container {
+        align-items: center;
+    }
+    .menu .text {
+        padding: 0 0 0 32px;
+    }
+    header nav .logo {
+      position: relative;
+      transition: .45s ease;
+      font-family: Cabin, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 9.4px;
+      margin: 0 0 15px;
+      color: #FFFAFA;
+      text-decoration: none;
+      margin-left: 0;
+      display: flex;
+    }
+    header nav .logo a:visited {
+      color: white;
+    }
+    header nav .logo a:hover {
+      color: #d5cbba;
+    }
+    header nav .navigation-bar {
+     padding-left: 10rem;
+     padding-right: 0;
+    }
+  }
+  
+  @media (max-width: 992px) {
+    body {
+        padding: 0;
+    }
+    .dots {
+        display: none;
+    }
+  header nav .logo {
+      position: relative;
+      transition: .45s ease;
+      font-family: Cabin, sans-serif;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: 9.4px;
+      margin: 0 0 15px;
+      color: #FFFAFA;
+      text-decoration: none;
+      margin-left: 0;
+      display: flex;
+    }
+    header nav .logo a:visited {
+      color: white;
+    }
+    header nav .logo a:hover {
+      color: #d5cbba;
+    }
+    header nav .navigation-bar {
+     padding-left: 10rem;
+     padding-right: 0;
+    }
+    .about-us {
+        display: block;
+        padding-top: 50px;
+    }
+    .about-us .text , .reservation .text {
+        padding: 0 0 40px;
+    }
+    .about-us .image-container .image1, .reservation .image-container .image1 {
+        margin-left: 0;
+    }
+    .menu {
+        display: block;
+        padding: 60px 20px 60px 40px;
+    }
+    .menu .text {
+        padding: 20px 20px 0 0;
+    }
+    .reservation {
+        display: block;
+        padding: 30px 20px 60px;
+    }
+    .contact {
+        display: block;
+        padding: 78px 20px;
+    }
+    .contact .form {
+        margin-left: 0;
+        margin-top: 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    header nav {
+        display: block;
+        text-align: center;
+        left: 0;
+        top: 0;
+        width: 100%;
+        padding:0;
+    }
+    header nav .logo {
+      display: none;
+    }
+    header nav .toggle {
+        display: block;
+    }
+    header .navigation-bar {
+        position: fixed;
+        top: 0;
+        left: -230px;
+        height: 100%;
+        background-color: #262526;
+        overflow: hidden;
+        z-index: 20;      
+    }
+    header .navigation-bar ul {
+        display: block;
+        padding-top: 40px;
+    }
+    header .navigation-bar ul li {
+        text-align: left;
+        padding: 14px 0;
+    }
+    footer .contact-container {
+        display: block;
+    }
+    footer .social-media {
+        margin-bottom: 40px;
+    }
+    .copyright ul {
+        display: block;
+        margin-top: -20px;
+    }
+    .copyright li {
+        margin-bottom: 5px;
+    }
+    .copyright li:not(:last-of-type):after {
+        content: '';
+    }
+  
+  }
+  
+  @media (max-width: 576px) {
+    h3, h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size:90px
+    }
+    header {
+        padding: 0;
+    }
+    header nav .logo {
+        padding-left: 0;
+    }
+    header nav .toggle.active {
+        left: 36%;
+    }
+    header .navigation-bar.show {
+        padding: 20px;
+        width: 48%;
+    }
+    .about-us, .reservation {
+        padding: 60px 20px;
+    }
+    .menu {
+        padding: 60px 0 60px 20px;
+    }
+  }
+  /*End Home Page Responsive*/
