@@ -582,6 +582,191 @@ img {
 }
 
 /* End add products */
+
+/* Start add container */
+.signup-container {
+  position: relative;
+  display: grid;
+  grid-template-areas: "left right";
+  max-width: 900px;
+  left: 100px;
+  margin: 20px;
+  border-radius: 8px;
+}
+
+.left-container {
+  background: #807182;
+  overflow: hidden;
+  padding: 40px 0 0 0;
+  position: relative;
+  text-align: center;
+  width: 350px;
+  height: 530px;
+}
+.left-container h1 {
+  color: rgba(0, 0, 0, 0.8);
+  display: inline-block;
+  font-size: 28px;
+}
+.left-container .food {
+  bottom: -5px;
+  position: absolute;
+  text-align: center;
+}
+.left-container .food:before {
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.4;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+.left-container img {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  left: 70px;
+}
+
+.right-container {
+  background: #f9c7c2;
+  display: grid;
+  grid-template-areas: "." ".";
+  width: 650px;
+  padding: 15px;
+  height: 530px;
+}
+.right-container h1:nth-of-type(1) {
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 28px;
+  font-weight: 600;
+}
+.right-container .set {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+.right-container .set .food-name label{
+  width: 50px;
+}
+.right-container .set .food-name input {
+  width: 130px;
+}
+.right-container .set .food-img {
+  position: relative;
+  right: 40px;
+}
+.right-container .set .food-img p {
+  width: 100px;
+}
+.right-container .set .food-img .food-file {
+  position: relative;
+  bottom: 51px;
+  left: 110px;
+}
+.right-container .set .food-img .food-file input {
+  height: 50px;
+  border: none;
+}
+.right-container .set .food-img .imgprv {
+  position: relative;
+  left: 118px;
+  bottom: 50px;
+}
+.right-container .set .food-img .imgprv img {
+  background: none;
+  border-radius: 8px;
+  height: 150px;
+  width: 150px;
+}
+.right-container .set .food-category {
+  position: relative;
+  bottom: 183px;
+  width: 100px;
+}
+.right-container .set .food-category label { 
+  margin-bottom: 5px;
+}
+.right-container .set .food-category select {
+  position: relative;
+  width: 100px;
+  left: 120px;
+  bottom: 35px;
+}
+.right-container .set .price {
+  position: relative;
+  bottom: 212px;
+}
+.right-container .set .price label {
+  width: 50px;
+}
+.right-container .set .price input {
+  width: 70px;
+}
+.right-container .set .weight {
+  position: relative;
+  bottom: 205px;
+  width: 300px;
+}
+.right-container .set .weight label {
+  width: 150px;
+}
+.right-container .set .weight input {
+  position: relative;
+  width: 80px;
+  left: 133px;
+  bottom: 31px;
+}
+.right-container .set .desc {
+  position: relative;
+  bottom: 233px;
+  width: 300px;
+}
+
+.right-container input {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  height: 38px;
+  line-height: 38px;
+  padding-left: 5px;
+}
+
+
+.right-container label, .right-container input {
+  width: 176px;
+}
+.right-container .buttons {
+  position: relative;
+  bottom: 200px;
+}
+.right-container .buttons button {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  line-height: 38px;
+  width: 100px;
+  border-radius: 19px;
+  font-family: "Montserrat", sans-serif;
+}
+.right-container .buttons #back {
+  background: #fff;
+  transition: 0.2s all ease-in-out;
+}
+.right-container .buttons #back:hover {
+  background: #171A2B;
+  color: white;
+}
+.right-container .buttons #next {
+  background: #807182;
+  border: 1px solid transparent;
+  color: #fff;
+}
+.right-container .buttons #next:hover {
+  background: #171A2B;
+}
+
+/* End add container */
+
 /*Start Footer*/
 footer {
     background-color: #121212;
