@@ -748,11 +748,23 @@ img {
   border-radius: 19px;
   font-family: "Montserrat", sans-serif;
 }
-.right-container .buttons #back {
+.right-container a {
+  text-decoration: none;
+  position: relative;
+  bottom: 238px;
+  left: 125px;
+}
+.right-container #back {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  height: 38px;
+  line-height: 38px;
+  width: 100px;
+  border-radius: 19px;
+  font-family: "Montserrat", sans-serif;
   background: #fff;
   transition: 0.2s all ease-in-out;
 }
-.right-container .buttons #back:hover {
+.right-container #back:hover {
   background: #171A2B;
   color: white;
 }
