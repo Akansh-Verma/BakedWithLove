@@ -47,7 +47,7 @@ baked with love/
 │ │ │ │ ├── templates\
 │ │ │ │ ├── application.properties\
 ├── pom.xml\
-└── README.md\
+└── README.md
 
 ## Contact Information
 
@@ -66,9 +66,12 @@ We would like to thank the following open-source libraries for their contributio
 
 ### User Section
 
-![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh1.jpg)
-![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh2.jpg)
-![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh3.jpg)
-![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh4.jpg)
-![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh5.jpg)
-![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh6.jpg)
+#### Home Page
+
+#### Shop Page
+
+#### Cart Page
+
+#### Login Page
+
+### Admin Section
