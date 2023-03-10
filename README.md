@@ -66,7 +66,7 @@ We would like to thank the following open-source libraries for their contributio
 
 ### User Section
 
-#### Home Page
+### Home Page
 
 ![uploadh1](https://user-images.githubusercontent.com/58855711/224252276-ac3abe4c-9878-4a96-94d8-49e8a029dcd1.jpg)
 
@@ -80,8 +80,7 @@ We would like to thank the following open-source libraries for their contributio
 
 ![uploadh6](https://user-images.githubusercontent.com/58855711/224252395-248993d5-92c1-4aa2-8f8c-e73f57326373.jpg)
 
-
-#### Shop Page
+### Shop Page
 
 ![shoph1](https://user-images.githubusercontent.com/58855711/224252873-49acf342-d2cd-40ac-ab6b-09c4eeb418b1.jpg)
 
@@ -91,7 +90,7 @@ We would like to thank the following open-source libraries for their contributio
 
 ![shoph4](https://user-images.githubusercontent.com/58855711/224252959-7208d251-93de-4814-9d2f-5dc4a7ebd033.jpg)
 
-#### Cart Page
+### Cart Page
 
 ![carth1](https://user-images.githubusercontent.com/58855711/224254358-6344169d-f92b-44fa-bfba-38be44fc742b.jpg)
 
@@ -107,7 +106,7 @@ We would like to thank the following open-source libraries for their contributio
 
 ![carth7](https://user-images.githubusercontent.com/58855711/224254488-91c3f0f4-b2cd-4df0-8b8f-70396368f24e.jpg)
 
-### Admin Section
+## Admin Section
 
 ![adminh1](https://user-images.githubusercontent.com/58855711/224254885-0135a542-a951-4033-9035-5414ba7510d0.jpg)
 
@@ -117,4 +116,7 @@ We would like to thank the following open-source libraries for their contributio
 
 ![adminh4](https://user-images.githubusercontent.com/58855711/224254953-c9c89581-d24b-4f1c-bb1c-7daa1c6df209.jpg)
 
+## Future work
 
+- Switch to MySQl or PostgreSQL
+- Deploy on GCP or AWS
