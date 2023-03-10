@@ -29,24 +29,25 @@ Contributions are always welcome! Please follow the guidelines below:
 ## Project Structure
 
 baked with love/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ ├── com.bakedwithlove.minor/
-│ │ │ │ ├── controller/
-│ │ │ │ ├── model/
-│ │ │ │ ├── repository/
-│ │ │ │ ├── service/
-│ │ │ │ ├── configuration/
-│ │ │ │ ├── dto/
-│ │ │ │ ├── global/
-│ │ │ │ ├── MinorApplication.java
-│ │ │ ├── resources/
-│ │ │ │ ├── static/
-│ │ │ │ ├── templates/
-│ │ │ │ ├── application.properties
-├── pom.xml
-└── README.md
+
+├── src\
+│ ├── main\
+│ │ ├── java\
+│ │ │ ├── com.bakedwithlove.minor\
+│ │ │ │ ├── controller\
+│ │ │ │ ├── model\
+│ │ │ │ ├── repository\
+│ │ │ │ ├── service\
+│ │ │ │ ├── configuration\
+│ │ │ │ ├── dto\
+│ │ │ │ ├── global\
+│ │ │ │ ├── MinorApplication.java\
+│ │ │ ├── resources\
+│ │ │ │ ├── static\
+│ │ │ │ ├── templates\
+│ │ │ │ ├── application.properties\
+├── pom.xml\
+└── README.md\
 
 ## Contact Information
 
@@ -65,9 +66,9 @@ We would like to thank the following open-source libraries for their contributio
 
 ### User Section
 
-![HomePage](D:/GithubDesktop/BakedWithLove/minor/src/main/resources/static/images/uploadh1.jpg)
-![HomePage](D:/GithubDesktop/BakedWithLove/minor/src/main/resources/static/images/uploadh2.jpg)
-![HomePage](D:/GithubDesktop/BakedWithLove/minor/src/main/resources/static/images/uploadh3.jpg)
-![HomePage](D:/GithubDesktop/BakedWithLove/minor/src/main/resources/static/images/uploadh4.jpg)
-![HomePage](D:/GithubDesktop/BakedWithLove/minor/src/main/resources/static/images/uploadh5.jpg)
-![HomePage](D:/GithubDesktop/BakedWithLove/minor/src/main/resources/static/images/uploadh6.jpg)
+![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh1.jpg)
+![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh2.jpg)
+![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh3.jpg)
+![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh4.jpg)
+![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh5.jpg)
+![HomePage](/BakedWithLove/minor/src/main/resources/static/images/uploadh6.jpg)
